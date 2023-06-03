@@ -1,0 +1,20 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   
+    int a=10,b;
+   
+   printf("after assign a value to b is %d",b=a);
+   
+   printf("\nvalue after add and assign %d",a+=b);    
+   
+   printf("\nvalue after multiply and assign %d",a-=b);    
+   
+   printf("\n%value after divide and assign %d",a/=b);  
+   
+   printf("\nvalue after multiply and assign %d",a*=b);    
+   
+   printf("\nvalue after modulus and assign %d",a%=b);    
+            return 0;
+}
