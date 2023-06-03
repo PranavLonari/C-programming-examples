@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    //here 1 means True And 0 Means False
+   printf("-----Relational Opeator example-----");
+   int a=2,b=3;
+   printf("\na==b is %d",a==b);
+   printf("\na!=b is %d",a!=b);
+   printf("\na>b is %d",a>b);
+   printf("\na<b is %d",a<b);
+   printf("\na>=b is %d",a>=b);
+   printf("\na<=b is %d",a<=b);
+
+               return 0;
+}
+output:
+-----Relational Opeator example-----
+a==b is 0
+a!=b is 1
+a>b is 0
+a<b is 1
+a>=b is 0
+a<=b is 1
