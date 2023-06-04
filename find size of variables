@@ -1,0 +1,15 @@
+
+#include <stdio.h>
+
+int main() {
+
+int i;
+char c;
+float f;
+double d;
+printf("\n%lu size of int",sizeof(i));
+printf("\n%lu size of char",sizeof(c));
+printf("\n%lu size of float",sizeof(f));
+printf("\n%lu size of double",sizeof(d));
+    return 0;
+}
