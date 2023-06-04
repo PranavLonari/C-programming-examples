@@ -14,3 +14,18 @@ int main() {
     
     return 0;
 }
+
+Output:
+
+            0 
+sum is 0	1 
+sum is 1	2 
+sum is 3	3 
+sum is 6	4 
+sum is 10	5 
+sum is 15	6 
+sum is 21	7 
+sum is 28	8 
+sum is 36	9 
+sum is 45	10 
+sum is 55
