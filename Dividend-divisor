@@ -1,0 +1,24 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+int dividend,divisor,quotient,remainder;
+printf("Enter Dividend And Divisor");
+scanf("%d \n %d",&dividend,&divisor);
+
+quotient= dividend / divisor;
+printf("\n %d is Quotient",quotient);
+remainder= dividend % divisor;
+printf("\n%d is Remainder",remainder);
+    return 0;
+}
+
+STD INPUT:
+24
+6
+
+Output:
+Enter Dividend And Divisor
+4 is Quotient
+0 is Remainder
