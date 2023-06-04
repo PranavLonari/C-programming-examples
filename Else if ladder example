@@ -1,0 +1,42 @@
+//Find largest of 3 numbers
+#include <stdio.h>
+
+int main() {
+
+int number_1,number_2,number_3;
+
+printf("\n Enter 3 numbers:\n");
+scanf("%d %d  %d \n",&number_1,&number_2,&number_3);
+
+if(number_1 > number_2 && number_1 > number_3)
+{
+    printf(" \n %d is Greater",number_1);
+}
+else if(number_2 > number_3 && number_2 > number_1)
+{
+    printf(" \n %d is Greater",number_2);
+}
+else if(number_3 > number_2 && number_3> number_1)
+{
+    printf(" \n %d is Greater",number_3);
+}
+
+else
+{
+    printf("all are equal");
+}
+
+    return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Enter 3 numbers:
+  STDIN -14 14 14
+  Output:
+  Enter 3 numbers:
+  all are equal
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  Enter 3 numbers:
+  STDIN -14 22 24
+  Output:
+  24 is Greater
+  -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
