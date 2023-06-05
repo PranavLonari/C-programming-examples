@@ -1,0 +1,38 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  
+  int result;
+  int number,originalnumber,remainder,i,j,n=0;
+  
+  printf("enter a number");
+  scanf("%d",&number);
+  originalnumber=number;
+  
+  for(originalnumber=number;originalnumber!=0;++n)
+  {
+      originalnumber/=10;
+  }
+  for(originalnumber = number;originalnumber!=0;originalnumber/=10)
+  {
+      remainder= originalnumber%10;
+      
+      result+=pow(remainder,n);
+  }
+  
+  if(result==number)
+  {
+      printf("\n%d is armstrong number",number);
+  }
+  else
+  {
+      printf("\n %d is not armstrong number",number);
+  }
+    return 0;
+}
+
+Output:
+enter a number
+1634
+1634 is a armstrong number
