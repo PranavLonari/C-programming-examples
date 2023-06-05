@@ -1,0 +1,26 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    int number;
+    int i;
+    printf("\nEnter a number");
+    scanf("%d",&number);
+    printf("Factors of %d are : \n",number);
+    for(i=1;i<=number;i++)
+    {
+        if(number % i== 0)
+        {
+            printf("\t%d",i);
+        }
+    }
+    return 0;
+}
+
+Output:
+
+Enter a number
+24
+Factors of 24 are : 
+	1	2	3	4	6	8	12	24
