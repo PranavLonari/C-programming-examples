@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+
+int num,originalnum,remainder,result=0;
+
+printf("\nEnter a  3 digit number -: ");
+scanf("\n%d",&num);
+originalnum=num;
+while(originalnum!=0)
+{
+    remainder= originalnum%10;
+    result+= remainder *remainder*remainder;
+    
+    originalnum/=10;
+}
+if(result==num)
+{
+    printf("\n%d is a Armstrong number",num);
+    
+}
+else
+{
+        printf("\n%d is not a Armstrong number",num);
+
+}
+    return 0;
+}
+
+Output:
+
+Enter a  3 digit number -: 370
+370 is a Armstrong number
