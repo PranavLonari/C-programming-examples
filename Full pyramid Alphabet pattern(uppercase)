@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main() {
+int i,j,k;
+char input,alphabet='A';
+printf("enter uppercase letter to get printed on last row:\n");
+scanf("%c",&input);
+    for(i=1;i<=(input-'A'+1);i++)
+    {
+        for(j=(input-'A'+1);j>i;j--)
+        {
+           printf(" "); 
+        }
+        for(k=1;k<=i;k++)
+        {
+            printf("%c ",alphabet);
+        }
+        alphabet++;
+        printf("\n");
+    }
+    return 0;
+}
+
+Output:
+enter uppercase letter to get printed on last row : E
+    A 
+   B B 
+  C C C 
+ D D D D 
+E E E E E 
