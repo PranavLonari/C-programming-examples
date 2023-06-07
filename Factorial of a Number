@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    
+    int i,n;
+    unsigned long long fact=1; 
+    
+    printf("enter a number\n");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        fact*=i;
+    }
+    if(n<0)
+    {
+        printf("error wrong input no factorial for negative number");
+    }
+    else
+    {
+    printf("factorial of %d is %llu",n,fact);
+    }
+    return 0;
+}
+
+Output:
+enter a number
+10
+factorial of 10 is 3628800
