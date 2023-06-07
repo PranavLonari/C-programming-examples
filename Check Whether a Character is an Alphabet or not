@@ -1,0 +1,54 @@
+
+#include <stdio.h>
+int main() {
+    char input;
+printf("enter a alphabet\n");
+scanf("%c",&input);
+if(isalpha(input))
+{
+    printf(" this is a alphabet");
+}
+else
+{
+    printf("its not a alphabet");
+}
+
+    return 0;
+}
+Output:
+
+enter a alphabet
+a
+this is a alphabet
+
+enter a alphabet
+77
+its not a alphabet
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#include <stdio.h>
+int main() {
+    char input;
+printf("enter a alphabet\n");
+scanf("%c",&input);
+if((input>='a' && input<='z') ||(input>='A' && input<='Z'))
+{
+    printf(" this is a alphabet");
+}
+else
+{
+    printf("its not a alphabet");
+}
+
+    return 0;
+}
+
+Output:
+
+enter a alphabet
+55
+its not a alphabet
+
+enter a alphabet
+A
+this is a alphabet
