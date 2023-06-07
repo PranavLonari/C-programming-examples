@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    int number,i,sum=0;
+    printf("enter a number upto sum of number get calculated\n");
+    scanf("%d",&number);
+    
+    for(i=1;i<=number;i++)
+    {
+        sum+=i;
+    }
+    printf("sum is %d",sum);
+    
+    return 0;
+}
+
+Output:
+
+enter a number
+100
+sum of natural numbers is 5050
