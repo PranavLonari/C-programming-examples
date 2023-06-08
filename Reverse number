@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+   int remainder, number;
+   printf("Enter a number: "); // Prompt the user to enter a number
+   scanf("%d", &number); // Read the number entered by the user
+   
+   while (number > 0) {
+       remainder = number % 10; // Calculate the remainder when dividing the number by 10
+       printf("%d", remainder); // Print the current digit
+       number = number / 10; // Remove the last digit from the number
+   }
+   
+   return 0;
+}
+Output:
+
+Enter a number: 52
+25
