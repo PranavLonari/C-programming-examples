@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+ int n,i=1,a=0,b=1,c;
+ printf("enter no.of terms\n");
+ scanf("%d",&n);
+ printf("\nFibonacci series is ");
+ 
+while(i<=n)
+{
+    printf("%d ",a);
+    c=a+b;
+    a=b;
+    b=c;
+    i++;
+}
+    return 0;
+}
+
+Output:
+
+enter no.of terms
+10
+Fibonacci series is 0 1 1 2 3 5 8 13 21 34 
+
+Explanation:
+1. The program asks the user to enter the number of terms they want in the Fibonacci series.
+
+2. It then starts a loop that will generate and print the Fibonacci series.
+
+3. Inside the loop, it prints the current number (a) of the Fibonacci series.
+
+4. It calculates the next number in the series by adding the current number (a) and the previous number (b), and stores it in c.
+
+5. It updates the values of a and b to prepare for the next iteration of the loop. a becomes the previous number (b), and b becomes the current number (c).
+
+6. The loop continues until it has generated and printed the desired number of terms specified by the user.
+
+7. Finally, the program ends.
+
+   So, the program essentially asks the user for a number, then generates and prints that many terms of the Fibonacci series. Each term is obtained by adding the two previous terms, starting with 0 and 1
