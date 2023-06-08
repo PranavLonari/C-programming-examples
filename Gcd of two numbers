@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int number1, number2;
+    int i;
+    int gcd;
+    
+    printf("Enter 2 numbers: \n");
+    scanf("%d %d", &number1, &number2);
+    
+    // Finding the GCD using a for loop
+    for (i = 1; i <= number1 && i <= number2; i++) {
+        // Check if i is a factor of both numbers
+        if (number1 % i == 0 && number2 % i == 0) {
+            gcd = i; // Update the gcd if i is a common factor
+        }
+    }
+    
+    // Print the GCD
+    printf("GCD of %d and %d is %d", number1,number2,gcd);
+    
+    return 0;
+}
+
+Output:
+
+Enter 2 numbers: 
+18 24
+GCD of 18 and 24 is 6
+
