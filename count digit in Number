@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    long long n;
+    int number, cnt = 0;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    n = number; // Assign the value of number to n
+    
+    do {
+        n /= 10; // Remove the last digit from n
+        cnt++;   // Increment the digit count
+    } while (n != 0); // Continue the loop until n becomes 0
+    
+    printf("The number of digits in %d is %d\n", number, cnt);
+
+    return 0;
+}
+
+Output:
+
+Enter a number: 5645
+The number of digits in 5645 is 4
