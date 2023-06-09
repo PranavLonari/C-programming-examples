@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int number, i, count = 0;
+    
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    
+    // Loop to check for factors of the number
+    for (i = 1; i <= number; i++) {
+        if (number % i == 0) {
+            count++;
+        }
+    }
+    
+    // Check if the number is prime based on the count of factors
+    if (count == 2) {
+        printf("%d is a prime number\n", number);
+    } else {
+        printf("%d is not a prime number\n", number);
+    }
+    
+    return 0;
+}
+
+output:
+
+Enter a number: 7
+7 is a prime number
+
+Enter a number: 4
+4 is not a prime number
