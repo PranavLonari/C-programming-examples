@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+
+    int original, number, remainder, reversed = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    original = number; // Store the original number
+
+    // Reverse the digits of the number
+    while (number > 0) {
+        remainder = number % 10; // Get the last digit of the number
+        reversed = reversed * 10 + remainder; // Append the digit to the reversed number
+        number = number / 10; // Remove the last digit from the number
+    }
+
+    // Check if the reversed number is equal to the original number
+    if (original == reversed) {
+        printf("%d is a palindrome\n", original);
+    } else {
+        printf("%d is not a palindrome\n", original);
+    }
+
+    return 0;
+}
+
+Output:
+
+Enter a number: 1232
+1232 is not a palindrome
+
+Enter a number: 2002
+2002 is a palindrome
