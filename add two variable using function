@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+// Function declaration
+int calculateSum(int num1, int num2);
+
+int main() {
+    int number1, number2, sum;
+
+    // Prompt the user to enter two numbers
+    printf("Enter two numbers: ");
+    scanf("%d %d", &number1, &number2);
+
+    // Calculate the sum using the calculateSum function
+    sum = calculateSum(number1, number2);
+
+    // Display the sum to the user
+    printf("Sum: %d\n", sum);
+
+    return 0;
+}
+
+// Function definition for calculating the sum of two numbers
+int calculateSum(int num1, int num2) {
+    return num1 + num2;
+}
+
+Output :
+
+
+Enter two numbers: 4 5
+Sum: 9
