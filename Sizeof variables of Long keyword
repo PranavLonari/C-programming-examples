@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int a;                // Declaration of an integer variable
+    long b;               // Declaration of a long integer variable
+    long long c;          // Declaration of a long long integer variable
+    double e;             // Declaration of a double variable
+    long double f;        // Declaration of a long double variable
+
+    // Printing the sizes of the data types using the sizeof operator
+    printf("Size of int = %zu bytes\n", sizeof(a));
+    printf("Size of long = %zu bytes\n", sizeof(b));
+    printf("Size of long long = %zu bytes\n", sizeof(c));
+    printf("Size of double = %zu bytes\n", sizeof(e));
+    printf("Size of long double = %zu bytes\n", sizeof(f));
+
+    return 0;
+}
+Output:
+Size of int = 4 bytes
+Size of long int = 8 bytes
+Size of long long int = 8 bytes
+Size of double = 8 bytes
+Size of long double = 16 bytes
