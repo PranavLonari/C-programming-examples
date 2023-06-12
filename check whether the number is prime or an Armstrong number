@@ -1,0 +1,99 @@
+#include <stdio.h>
+#include <math.h>
+
+int checkPrime(int number);
+int checkArmstrong(int number);
+
+int main() {
+    int number, primeFlag = 0, armstrongFlag = 0;
+
+    // Prompt the user to enter a number
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check if the number is prime
+    primeFlag = checkPrime(number);
+
+    // Display the result for prime number
+    if (primeFlag == 1) {
+        printf("%d is a prime number.\n", number);
+    } else {
+        printf("%d is not a prime number.\n", number);
+    }
+
+    // Check if the number is an Armstrong number
+    armstrongFlag = checkArmstrong(number);
+
+    // Display the result for Armstrong number
+    if (armstrongFlag == 1) {
+        printf("%d is an Armstrong number.\n", number);
+    } else {
+        printf("%d is not an Armstrong number.\n", number);
+    }
+
+    return 0;
+}
+
+// Function to check if a number is prime
+int checkPrime(int number) {
+    int i;
+
+    if (number <= 1) {
+        return 0;  // Not prime if less than or equal to 1
+    }
+
+    for (i = 2; i <= number / 2; ++i) {
+        if (number % i == 0) {
+            return 0;  // Not prime if divisible by any number in the range
+        }
+    }
+    return 1;  // Prime if not divisible by any number
+}
+// Function to check if a number is an Armstrong number
+int checkArmstrong(int number) {
+    int original, remainder, digits = 0, result = 0;
+
+    original = number;
+
+    // Count the number of digits in the input number
+    while (original != 0) {
+        original /= 10;
+        digits++;
+    }
+    original = number;
+
+    // Calculate the Armstrong number condition
+    while (original != 0) {
+        remainder = original % 10;
+        result += pow(remainder, digits);
+        original /= 10;
+    }
+
+    if (result == number) {
+        return 1;  // Armstrong number if the sum matches the original number
+    }
+
+    return 0;  // Not an Armstrong number otherwise
+}
+
+Output:
+
+1.If the input number is a prime number and an Armstrong number:
+Enter a number: 153
+153 is a prime number.
+153 is an Armstrong number.
+
+2.If the input number is a prime number but not an Armstrong number:
+Enter a number: 17
+17 is a prime number.
+17 is not an Armstrong number.
+
+3.If the input number is not a prime number but an Armstrong number:
+Enter a number: 370
+370 is not a prime number.
+370 is an Armstrong number.
+
+4.If the input number is neither a prime number nor an Armstrong number:
+Enter a number: 10
+10 is not a prime number.
+10 is not an Armstrong number.
