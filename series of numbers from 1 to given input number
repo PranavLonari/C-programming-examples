@@ -6,7 +6,7 @@ int main() {
     printf("Enter a number: "); // Prompt the user to enter a number
     scanf("%d", &number); // Read the input number from the user
     
-    printf("Series of numbers from 1 to given input\n"); // Print a message indicating the series of numbers
+    printf("Series of numbers from 1 to given input number\n"); // Print a message indicating the series of numbers
     
     // Iterate from 1 to the input number
     for (i = 1; i <= number; i++) {
@@ -18,7 +18,7 @@ int main() {
 
 output:
 Enter a number: 5
-Series of numbers from 1 to Given input:
+Series of numbers from 1 to given input number:
 1
 2
 3
