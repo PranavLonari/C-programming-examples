@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    // Check if the number is negative
+    if (number < 0) {
+        printf("%d is a negative number, so we are converting it to a positive number.\n", number);
+        number = -number; // Convert the number to its positive counterpart
+        printf("After converting, the number is: %d\n", number);
+    }
+    else if (number > 0) {
+        printf("%d is a positive number.\n", number);
+    }
+    else {
+        printf("The number entered is zero is not negative or positive.\n");
+    }
+    return 0;
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Output:
+
+When the user enters a negative number:
+
+Enter a number: -7
+-7 is a negative number, so we are converting it to a positive number.
+After converting, the number is: 7
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When the user enters a positive number:
+
+Enter a number: 10
+10 is a positive number.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+When the user enters zero:
+
+Enter a number: 0
+The number entered is zero is not negative or positive.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
