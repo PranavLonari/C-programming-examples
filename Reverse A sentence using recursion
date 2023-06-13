@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+// Function prototype
+void reverseSentence();
+
+int main() {
+    printf("Enter a sentence: \n");
+    reverseSentence();
+    return 0;
+}
+
+// Recursive function to reverse the sentence
+void reverseSentence() {
+    char character;
+    
+    // Read a character from user input
+    scanf("%c", &character);
+    
+    // Check if the character is not a newline character
+    if (character != '\n') {
+        // Recursively call the function to read the next character
+        reverseSentence();
+        
+        // Print the character after the recursive call (reverses the order)
+        printf("%c", character);
+    }
+}
+
+output:
+
+Enter a sentence:
+Hello, World!
+!dlroW ,olleH
