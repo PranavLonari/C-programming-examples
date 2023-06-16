@@ -1,0 +1,47 @@
+#include <stdio.h>
+int main() {
+   int arr[10][10];
+   int i,j,k,l;
+   printf("Enter no. of rows and columns\n");
+   scanf("%d%d",&i,&j);
+   for(k=0;k<i;k++)
+   {
+       for(l=0;l<j;l++)
+       {
+           printf("enter values %d %d :-\n",k,l);
+           scanf("%d",&arr[k][l]);
+       }
+   }
+   
+   printf("\nMatrix Elements are : \n");
+      for(k=0;k<i;k++)
+   {
+       for(l=0;l<j;l++)
+       {
+
+           printf("%d ",arr[k][l]);
+       }
+       printf("\n");
+   }
+
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Output:
+Enter no. of rows and columns
+2
+2
+enter values 0 0 :-
+12
+enter values 0 1 :-
+14
+enter values 1 0 :-
+22
+enter values 1 1 :-
+24
+
+Matrix Elements are : 
+12 14 
+22 24 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
