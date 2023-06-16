@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main() {
+    int array[10];  // Array to store the elements
+    int n;          // Number of elements
+    int i;          // Loop variable
+    int sum = 0;    // Sum of elements
+    double average; // Average of elements
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    // Input the elements of the array
+    for (i = 0; i < n; i++) {
+        printf("Enter the %dth element: ", i + 1);
+        scanf("%d", &array[i]);
+        sum += array[i];
+    }
+    // Display the elements of the array
+    printf("Elements in the array: ");
+    for (i = 0; i < n; i++) {
+        printf("%d ", array[i]);
+    }
+    // Calculate the average
+    average = (double)sum / n;
+    printf("\nAverage of the elements: %.2lf\n", average);
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Output:
+Enter the number of elements in the array: 5
+Enter the 1st element: 10
+Enter the 2nd element: 20
+Enter the 3rd element: 30
+Enter the 4th element: 40
+Enter the 5th element: 50
+Elements in the array: 10 20 30 40 50 
+Average of the elements: 30.00
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
