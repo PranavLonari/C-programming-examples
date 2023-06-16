@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main() {
+int arr[10];
+int i,n;
+int sum=0;
+printf("enter no. of elements-:\n");
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+    printf("enter number %d  \n",i+1);
+    scanf("%d",&arr[i]);
+    sum+=arr[i];
+}
+for(i=0;i<n;i++)
+{
+    printf("\t%d ",arr[i]);
+}
+printf("\nsum is %d",sum);
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+Output:
+enter no. of elements-:
+5
+enter number 1  
+11
+enter number 2  
+223
+enter number 3  
+22
+enter number 4  
+25
+enter number 5  
+54
+11 	223 	22 	25 	54 
+sum is 335
