@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int arr[2][3][2];  // Declare a three-dimensional integer array
+    int block, row, column;  // Variables for loop counters
+
+    // Input values into the array
+    for (block = 0; block < 2; block++) {
+        for (row = 0; row < 3; row++) {
+            for (column = 0; column < 2; column++) {
+                printf("Enter value for arr[%d][%d][%d]: ", block, row, column);
+                scanf("%d", &arr[block][row][column]);
+            }
+        }
+    }
+
+    // Print the values of the array
+    for (block = 0; block < 2; block++) {
+        for (row = 0; row < 3; row++) {
+            for (column = 0; column < 2; column++) {
+                printf("%d ", arr[block][row][column]);
+            }
+           //printf("\n");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+output:
+Enter value for arr[0][0][0]: 1
+Enter value for arr[0][0][1]: 2
+Enter value for arr[0][1][0]: 3
+Enter value for arr[0][1][1]: 4
+Enter value for arr[0][2][0]: 5
+Enter value for arr[0][2][1]: 6
+Enter value for arr[1][0][0]: 7
+Enter value for arr[1][0][1]: 8
+Enter value for arr[1][1][0]: 9
+Enter value for arr[1][1][1]: 10
+Enter value for arr[1][2][0]: 11
+Enter value for arr[1][2][1]: 12
+
+1 2 3 4 5 6
+7 8 9 10 11 12
