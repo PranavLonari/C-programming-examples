@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num = 10; // Declare and initialize the variable 'num' with the value 10
+    
+    printf("\nValue of num: %d\n", num); // Print the value of 'num' using the %d format specifier
+    
+    printf("Address of num: %p\n", &num); // Print the address of 'num' using the %p format specifier
+    
+    return 0;
+}
+
+output:
+
+
+Value of num: 10
+Address of num: 0x7fffcaf4b3ec
