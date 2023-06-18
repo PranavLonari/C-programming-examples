@@ -1,0 +1,43 @@
+#include <stdio.h>
+int display(int num[2][2])
+{
+    int i,j,sum=0;
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<2;j++)
+        {
+            
+        
+        sum+=num[i][j];
+    }
+    }
+    return sum;
+}
+int main() {
+
+int n;
+int num[2][2];
+int i,j,result=0;
+
+
+for(i=0;i<2;i++)
+{
+    for(j=0;j<2;j++)
+    {
+        printf("enter %d  %d\t:",i,j);
+        scanf("%d",&num[i][j]);
+    }
+        
+}
+result = display(num);
+        printf("result=%d",result);
+    return 0;
+}
+
+Output:
+
+enter 0  0	:1
+enter 0  1	:2
+enter 1  0	:3
+enter 1  1	:4
+result=10
