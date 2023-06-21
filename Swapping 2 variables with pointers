@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+// Function declaration to swap two integers
+void swap(int* num1, int* num2);
+
+int main() {
+    int num1, num2;
+    
+    printf("Enter two numbers: \n");
+    scanf("%d %d", &num1, &num2);
+    
+    printf("\nBefore swapping\nnum1 = %d \t num2 = %d\n", num1, num2);
+    
+    // Call the swap function to swap the numbers
+    swap(&num1, &num2);
+    
+    printf("After swapping\nnum1 = %d and num2 = %d\n", num1, num2);
+    
+    return 0;
+}
+
+// Function definition to swap two integers
+void swap(int* num1, int* num2) {
+    int temp;
+    
+    // Swap the values using a temporary variable
+    temp = *num1;
+    *num1 = *num2;
+    *num2 = temp;
+}
+
+Output:
+
+Enter two numbers: 
+ 22 24
+ 22 24
+
+Before swapping
+num1 = 22 	 num2 = 24
+After swapping
+num1 = 24 and num2 = 22
