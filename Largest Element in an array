@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int i, n;
+    double nums[30];
+    
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+    
+    for (i = 0; i < n; i++) {
+        printf("Enter number %d: ", i + 1);
+        scanf("%lf", &nums[i]);
+    }
+    
+    double largest = nums[0];  // Initialize largest with the first element
+    
+    for (i = 1; i < n; i++) {
+        if (largest < nums[i]) {
+            largest = nums[i];
+        }
+    }
+    
+    printf("The largest element in the array is: %.2lf", largest);
+
+    return 0;
+}
+
+Output:
+Enter the total number of elements: 5
+Enter number 1: 10.5
+Enter number 2: 7.2
+Enter number 3: 9.8
+Enter number 4: 12.3
+Enter number 5: 6.7
+The largest element in the array is: 12.30
