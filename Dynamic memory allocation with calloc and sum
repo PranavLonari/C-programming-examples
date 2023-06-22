@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int* elementArray;  // Pointer to dynamically allocated memory
+    int i, numElements, sum = 0;
+
+    printf("Enter total number of elements: ");
+    scanf("%d", &numElements);
+
+    // Allocate memory dynamically
+    elementArray = (int*) calloc(numElements, sizeof(int));
+
+    // Check if memory allocation is successful
+    if (elementArray == NULL) {
+        printf("Error! Failed to allocate memory.");
+        exit(0);
+    }
+
+    printf("Enter elements: \n");
+    for (i = 0; i < numElements; i++) {
+        scanf("%d", elementArray + i);
+        sum += *(elementArray + i);
+    }
+
+    printf("Sum = %d", sum);
+
+    // Free dynamically allocated memory
+    free(elementArray);
+
+    return 0;
+}
+
+Output:
+Enter total number of elements: 5
+Enter elements:
+2
+4
+6
+8
+10
+Sum = 30
