@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr, i, size1, size2;
+    
+    printf("Enter size: ");
+    scanf("%d", &size1);
+    
+    // Allocate memory dynamically
+    ptr = (int*)malloc(size1 * sizeof(int));
+    
+    printf("Initially allocated addresses:\n");
+    for (i = 0; i < size1; i++) {
+        printf("%p\n", (void*)(ptr + i));
+    }
+    
+    printf("Enter new size: ");
+    scanf("%d", &size2);
+    
+    // Reallocate memory with the new size
+    ptr = realloc(ptr, size2 * sizeof(int));
+    
+    printf("Addresses of newly allocated size:\n");
+    for (i = 0; i < size2; i++) {
+        printf("%p\n", (void*)(ptr + i));
+    }
+
+    // Free dynamically allocated memory
+    free(ptr);
+
+    return 0;
+}
+
+output:
+Enter size: 3
+Initially allocated addresses:
+0x7ffea43b57a0
+0x7ffea43b57a4
+0x7ffea43b57a8
+Enter new size: 5
+Addresses of newly allocated size:
+0x7ffea43b57a0
+0x7ffea43b57a4
+0x7ffea43b57a8
+0x7ffea43b57ac
+0x7ffea43b57b0
