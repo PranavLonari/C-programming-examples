@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr, i, n, sum = 0;
+
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+
+    // Dynamically allocate memory for n integers
+    ptr = (int*) malloc(n * sizeof(int));
+
+    // Check if memory allocation is successful
+    if(ptr == NULL) {
+        printf("Error! Failed to allocate memory.");
+        exit(0);
+    }
+
+    printf("Enter elements:\n");
+    for(i = 0; i < n; i++) {
+        scanf("%d", ptr + i);
+        sum += *(ptr + i);
+    }
+
+    printf("Sum = %d", sum);
+
+    // Deallocate the dynamically allocated memory
+    free(ptr);
+
+    return 0;
+}
+
+Output:
+Enter the total number of elements: 5
+Enter elements:
+2
+4
+6
+8
+10
+Sum = 30
