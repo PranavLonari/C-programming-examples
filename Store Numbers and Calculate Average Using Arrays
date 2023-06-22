@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main() {
+    int i, number;
+    float numbers[20], average = 0, sum = 0;
+    
+    printf("Enter the total number of elements: ");
+    scanf("%d", &number);
+    
+    // Validate the input range
+    while (number > 100 || number < 1) {
+        printf("Invalid input! Please enter the total number of elements: ");
+        scanf("%d", &number);
+    }
+    
+    // Prompt for and store each element in the array
+    for (i = 0; i < number; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%f", &numbers[i]);
+        
+        sum += numbers[i];  // Calculate the cumulative sum
+    }
+    
+    // Calculate the average
+    average = sum / number;
+    
+    // Display the sum of array elements
+    printf("Sum of array elements is: %.2f\n", sum);
+    
+    // Display the average of array elements
+    printf("Average of array elements is: %.2f\n", average);
+    
+    return 0;
+}
+
+Output:
+Enter the total number of elements: 5
+Enter element 1: 2.5
+Enter element 2: 4.8
+Enter element 3: 3.2
+Enter element 4: 1.9
+Enter element 5: 6.7
+Sum of array elements is: 19.10
+Average of array elements is: 3.82
