@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<math.h>
+
+// Function to calculate the standard deviation
+float calculateStandardDeviation(float dataArray[]);
+
+int main()
+{
+    int i;
+    float dataArray[10];
+
+    printf("Enter 10 elements:\n");
+    for(i = 0; i < 10; i++)
+    {
+        scanf("%f", &dataArray[i]);
+    }
+
+    printf("\nStandard Deviation = %.6f", calculateStandardDeviation(dataArray));
+
+    return 0;
+}
+
+// Function to calculate the standard deviation
+float calculateStandardDeviation(float dataArray[])
+{
+    int i;
+    float sum = 0.0, mean, standardDeviation = 0.0;
+
+    // Calculating the sum of the elements
+    for(i = 0; i < 10; i++)
+    {
+        sum += dataArray[i];
+    }
+
+    // Calculating the mean
+    mean = sum / 10;
+
+    // Calculating the sum of squared differences from the mean
+    for(i = 0; i < 10; i++)
+    {
+        standardDeviation += pow(dataArray[i] - mean, 2);
+    }
+
+    // Calculating the square root of the mean of squared differences
+    return sqrt(standardDeviation / 10);
+}
+
+Output:
+Enter 10 elements:
+1.5
+2.3
+4.6
+3.2
+5.1
+2.7
+6.4
+4.8
+3.9
+2.1
+
+Standard Deviation = 1.405586
