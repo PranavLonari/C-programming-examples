@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int n, i;
+    double *data;
+
+    // Read the total number of elements
+    printf("Enter the total number of elements: ");
+    scanf("%d", &n);
+
+    // Allocate memory for the array
+    data = (double*) calloc(n, sizeof(double));
+
+    // Check if memory allocation was successful
+    if (data == NULL) {
+        printf("Error! Memory allocation failed.\n");
+        exit(0);
+    }
+
+    // Read the elements from the user
+    for (i = 0; i < n; i++) {
+        printf("Enter element %d: ", i + 1);
+        scanf("%lf", data + i);
+    }
+
+    // Display the entered elements
+    printf("\nEntered elements:\n");
+    for (i = 0; i < n; i++) {
+        printf("%.2lf\n", *(data + i));
+    }
+
+    // Find the largest element
+    for (i = 1; i < n; i++) {
+        if (*data < *(data + i)) {
+            *data = *(data + i);
+        }
+    }
+
+    // Display the largest element
+    printf("Largest element in the array = %.2lf\n", *data);
+
+    // Free the allocated memory
+    free(data);
+
+    return 0;
+}
+
+Output:
+
+Enter the total number of elements: 5
+Enter element 1: 12.5
+Enter element 2: 9.8
+Enter element 3: 15.6
+Enter element 4: 11.2
+Enter element 5: 14.3
+
+Entered elements:
+12.50
+9.80
+15.60
+11.20
+14.30
+
+Largest element in the array = 15.60
