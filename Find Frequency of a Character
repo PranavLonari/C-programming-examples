@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    char name[30]; // Array to store the input string
+    char ch; // Variable to store the character to find frequency
+    int count = 0; // Variable to store the frequency count
+    int i; // Loop counter
+    
+    printf("Enter a string:\n");
+    fgets(name, sizeof(name), stdin); // Read a line of input including spaces
+    
+    printf("Enter a character to find its frequency:\n");
+    scanf("%c", &ch); // Read a single character
+    
+    // Count the frequency of the specified character in the string
+    for (i = 0; name[i] != '\0'; i++) {
+        if (ch == name[i]) {
+            count++;
+        }
+    }
+    
+    printf("Frequency of %c is %d\n", ch, count);
+
+    return 0;
+}
+
+output:
+Enter A string:
+Hello, World!
+Enter a character to find its Frequency:
+o
+Frequency of o is 2
