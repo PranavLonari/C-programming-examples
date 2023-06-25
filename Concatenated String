@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Custom implementation of strcat function
+int strcat_custom(char* destination, char* source) {
+    char* dest = destination;
+    
+    // Find the end of the destination string
+    while (*dest) {
+        dest++;
+    }
+    
+    // Concatenate the source string to the destination string
+    while (*source) {
+        *dest = *source;
+        dest++;
+        source++;
+    }
+    
+    *dest = '\0'; // Append null terminator to the concatenated string
+    
+    return 0;
+}
+
+int main() {
+    char source[] = "hello";
+    char destination[] = "World";
+    
+    // Concatenate the source string to the destination string
+    strcat_custom(source, destination);
+    
+    // Print the concatenated string
+    printf("Concatenated string: %s\n", source);
+
+    return 0;
+}
+
+Output:
+Concatenated string: helloWorld
