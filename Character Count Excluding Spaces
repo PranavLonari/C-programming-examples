@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int i, count = 0;
+    char name[] = "Spider Man";
+    
+    // Iterate through the string until the null terminator is encountered
+    for (i = 0; name[i] != '\0'; i++) {
+        if (name[i] != ' ') {
+            count++;
+        }
+    }
+    
+    printf("Length of a String = %d", count);
+    
+    return 0;
+}
+Output:
+
+Length of a String = 9
