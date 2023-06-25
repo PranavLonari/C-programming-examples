@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <ctype.h> // Include the ctype.h header for the tolower function
+
+#define MAX 100
+
+int main() {
+    char Line[MAX];
+    int vowel, digits, consonants, spaces;
+    vowel = digits = consonants = spaces = 0;
+
+    printf("Enter a String:\n");
+    fgets(Line, sizeof(Line), stdin);
+
+    for (int i = 0; Line[i] != '\0'; i++) {
+        Line[i] = tolower(Line[i]); // Convert character to lowercase using tolower
+        if (Line[i] == 'a' || Line[i] == 'e' || Line[i] == 'i' || Line[i] == 'o' || Line[i] == 'u') {
+            vowel++;
+        } else if (Line[i] >= 'a' && Line[i] <= 'z') {
+            consonants++;
+        } else if (Line[i] >= '0' && Line[i] <= '9') {
+            digits++;
+        } else if (Line[i] == ' ') {
+            spaces++;
+        }
+    }
+
+    printf("Vowels: %d\nConsonants: %d\nDigits: %d\nWhitespaces: %d\n", vowel, consonants, digits, spaces);
+
+    return 0;
+}
+
+Output:
+
+Enter a String:
+spiderman ironman 002
+Vowels: 6
+Consonants: 10
+Digits: 3
+Whitespaces: 2
