@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+// Function prototype declaration
+void displaystring(char str[]);
+
+int main() {
+    // Declare an array to store the name
+    char name[50];
+
+    printf("Enter your name:\n");
+    fgets(name, sizeof(name), stdin);  // Read input from the user using fgets
+
+    displaystring(name);  // Call the displaystring function to display the name
+
+    return 0;
+}
+
+// Function definition to display the string
+void displaystring(char name[]) {
+    printf("Output String:\n");
+    puts(name);  // Print the name using puts function
+}
+
+Output:
+
+enter your name:
+Iron Man
+Output String:
+Iron Man
+
