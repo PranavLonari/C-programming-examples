@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+// Function to convert a string to lowercase
+void lower(char* str)
+{
+    while(*str)
+    {
+        if(*str >= 'A' && *str <= 'Z') // Check if the character is an uppercase letter
+        {
+            *str += 32; // Convert the uppercase letter to lowercase
+        }
+        str++; // Move to the next character in the string
+    }
+}
+
+// Function to convert a string to uppercase
+void upper(char* str1)
+{
+    while(*str1)
+    {
+        if(*str1 >= 'a' && *str1 <= 'z') // Check if the character is a lowercase letter
+        {
+            *str1 -= 32; // Convert the lowercase letter to uppercase
+        }
+        str1++; // Move to the next character in the string
+    }
+}
+
+int main() {
+    char str[] = "spider";
+    char str1[] = "Man";
+    
+    upper(str); // Convert str to uppercase
+    upper(str1); // Convert str1 to uppercase
+    
+    printf("After converting to Uppercase = %s\n", str);
+    printf("After converting to Uppercase = %s\n", str1);
+    
+    lower(str); // Convert str back to lowercase
+    lower(str1); // Convert str1 back to lowercase
+    
+    printf("After converting to Lowercase = %s\n", str);
+    printf("After converting to Lowercase = %s\n", str1);
+    
+    return 0;
+}
+
+Output:
+
+After converting to Uppercase = SPIDER
+After converting to Uppercase = MAN
+
+After converting to Lowercase = spider
+After converting to Lowercase = man
