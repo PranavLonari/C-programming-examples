@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main() {
+    // Define a character array named "name" and initialize it with "Spider man"
+    char name[] = "Spider man";
+
+    // Print the first character of the array using array indexing
+    printf("%c \n", name[0]);
+
+    // Print the second character of the array using array indexing
+    printf("%c \n", name[1]);
+
+    // Print the ninth character of the array using array indexing
+    printf("%c \n", name[8]);
+
+    printf("\n\n");
+
+    // Declare a character pointer named "ptr" and assign the address of "name" to it
+    char *ptr;
+    ptr = name;
+
+    // Print the first character of the array using pointer arithmetic
+    printf("%c \n", *ptr);
+
+    // Print the second character of the array using pointer arithmetic
+    printf("%c \n", *(ptr + 1));
+
+    // Print the ninth character of the array using pointer arithmetic
+    printf("%c \n", *(ptr + 8));
+
+    return 0;
+}
+
+output:
+S 
+p 
+a 
+
+
+S 
+p 
+a 
