@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct Person {
+    char name[50];
+    int citno;
+    float salary;
+} person1; // Declare an instance of the struct Person
+
+int main() {
+    printf("Enter name of a person:\n");
+    fgets(person1.name, sizeof(person1.name), stdin); // Read the name from the user
+
+    printf("\nEnter Citizenship Number:\n");
+    scanf("%d", &person1.citno); // Read the citizenship number from the user
+
+    printf("\nEnter salary:\n");
+    scanf("%f", &person1.salary); // Read the salary from the user
+
+    printf("\nPerson's name is: %s", person1.name); // Display the name
+    printf("\nPerson's Citizenship Number is: %d", person1.citno); // Display the citizenship number
+    printf("\nPerson's Salary is: %.2f", person1.salary); // Display the salary with two decimal places
+
+    return 0;
+}
+
+Output:
+
+Enter name of a person:
+John Doe
+
+Enter Citizenship Number:
+12345
+
+Enter salary:
+5000.50
+
+Person's name is: John Doe
+Person's Citizenship Number is: 12345
+Person's Salary is: 5000.50
