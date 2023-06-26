@@ -1,0 +1,30 @@
+#include <stdio.h>
+typedef struct {
+    char name[20];
+    int empid;
+    float salary;
+} person;
+int main() {
+    person p1;
+    printf("Enter superhero's name:\n");
+    fgets(p1.name, sizeof(p1.name), stdin);  // Read superhero's name using fgets()
+    printf("\nEnter Employee ID:\n");
+    scanf("%d", &p1.empid);  // Read employee ID using scanf()
+    printf("Enter Salary:\n");
+    scanf("%f", &p1.salary);  // Read salary using scanf()
+    // Display the entered values
+    printf("Superhero's Name: %s\nEMP ID: %d\nSalary: %.2f\n", p1.name, p1.empid, p1.salary);
+    return 0;
+}
+
+Output:
+Enter superhero's name:
+Spider-Man
+
+Enter Employee ID:
+1234
+Enter Salary:
+5000.00
+Superhero's Name: Spider-Man
+EMP ID: 1234
+Salary: 5000.00
