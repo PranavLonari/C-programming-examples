@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct complex {
+    int imag;
+    float real;
+};
+
+struct number {
+    struct complex c;
+    int INTEGER;
+} num;
+
+int main() {
+    printf("Complex Number Information\n");
+  
+    printf("Enter Imaginary value: ");
+    scanf("%d", &num.c.imag);
+  
+    printf("Enter real number: ");
+    scanf("%f", &num.c.real);
+  
+    printf("Enter Integer: ");
+    scanf("%d", &num.INTEGER);
+  
+    printf("Imaginary value: %d\n", num.c.imag);
+    printf("Real number: %.2f\n", num.c.real);
+    printf("Integer: %d\n", num.INTEGER);
+  
+    return 0;
+}
+
+Output:
+Complex Number Information
+Enter Imaginary value: 5
+Enter real number: 3.14
+Enter Integer: 10
+Imaginary value: 5
+Real number: 3.14
+Integer: 10
