@@ -1,0 +1,32 @@
+#include <stdio.h>
+struct student {
+    char name[20];
+    int age;
+};
+// Function declaration
+void display(struct student s);
+int main() {
+    struct student s1;
+    printf("Enter Name:\n");
+    fgets(s1.name, sizeof(s1.name), stdin); // Read name input
+    printf("Enter age:\n");
+    scanf("%d", &s1.age); // Read age input
+    display(s1); // Call display function to print information
+    return 0;
+}
+// Function definition
+void display(struct student s) {
+    printf("Displaying information:\n");
+    printf("Name: %s", s.name); // Print name
+    printf("Age: %d\n", s.age); // Print age
+}
+
+Output:
+/tmp/xsUgaxJaVA.o
+Enter Name:
+Bruce Banner
+Enter age:
+28
+Displaying information:
+Name : Bruce Banner
+Age: 28 
