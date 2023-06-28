@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+struct student{
+    char name[20];
+    int age;
+};
+struct student getinformation();
+
+int main() {
+struct student s;
+
+s = getinformation();
+
+printf("\nDisplaying Information:\n");
+printf("Name: %s ",s.name);
+
+printf("Age: %d \n",s.age);
+
+    return 0;
+}
+struct student getinformation()
+{
+    struct student s1;
+    printf("Enter Name:\n");
+    fgets(s1.name,sizeof(s1.name),stdin);
+
+    printf("Enter Age:\n");
+
+    scanf("%d",&s1.age);
+    return s1;    
+}
+
+Output:
+
+Enter Name:
+Hawkeye
+Enter Age:
+32
+Displaying Information:
+Name: Hawkeye
+ Age: 32 
